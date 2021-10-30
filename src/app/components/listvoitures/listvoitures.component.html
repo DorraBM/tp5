@@ -1,0 +1,18 @@
+
+    <h1>Information sur les voitures</h1>
+    <br>
+    <button (click)="Marquelist('Ford')">Liste Des Ford</button>
+    <button (click)="Marquelist('Renault')">Liste Des Renault</button>
+    <button (click)="nombre()">Nombre des Clios</button>
+    <p *ngIf="lesvoitures.length != 0">{{ lesvoitures | json }}</p><!--pour afficher la liste des voiture du marque deja choisi-->
+    <p *ngIf="nbr != 0">le nombre de clio est :{{ nbr }}</p><!--pour afficher le nombre du voiture du marque clios-->
+    <br><br>
+    Donner le numéro de matricule <input type="text" #matricule />
+    <button (click)="nummatricule(matricule.value)">
+      Chercher
+    </button>
+    <br>
+    <p *ngIf="v != undefined">{{ v | json }}</p><!--pour afficher la voiture du matricule deja donnée-->
+    <br>
+
+  
